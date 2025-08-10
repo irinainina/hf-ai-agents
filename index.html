@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Agents Course</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>AI Agents Course</h1>
+    <a href="https://huggingface.co/learn/agents-course/unit0/introduction">Welcome to the AI Agents Course</a>
+    <ul id="file-list" />
+    <script src="lessons.js"></script>
+    <script>      
+      const list = document.getElementById('file-list');
+      lessons.forEach((lesson) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="file-viewer.html?file=${lesson.file}">${lesson.title}</a><br>`;
+        list.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
